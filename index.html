@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MobXplore - A Frida-based toolkit for mobile application security testing">
+  <title>MobXplore - By Creators of Mobexler</title>
+  <link rel="shortcut icon" href="assets/logo.webp" type="image/webp">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" as="style">
+  <link rel="preload" href="script.js" as="script">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- CSS with font-display swap -->
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+<body>
+  <!-- Header Section -->
+    <!-- Announcement Banner -->
+  <div class="announcement-banner">
+    <div class="container">
+      <p>To be released at Blackhat Asia 2025 Arsenal !!!</p>
+    </div>
+  </div>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <picture>
+          <source srcset="assets/logo.webp" type="image/webp">
+          <img src="assets/logo.png" alt="MobXplore Logo" width="50" height="50" loading="eager">
+        </picture>
+        <h1>MobXplore</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#setup">Setup</a></li>
+          <li><a href="https://github.com/enciphers-team/mobXplore" target="_blank" rel="noopener noreferrer">Github</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>A Unified Toolkit for Streamlining Mobile Application Security Testing</h2>
+        <p>MobXplore is a Frida-based, open-source tool designed to assist security researchers, developers, and pentesters in performing comprehensive mobile application security assessments.</p>
+      </div>
+      <div class="credits">
+          <span>Assembled and Maintained by</span>
+          <picture>
+            <source srcset="assets/enciphers-logo-white.webp" type="image/webp">
+            <img src="assets/enciphers-logo.png" alt="Enciphers" class="enciphers-logo" width="120" height="40" loading="lazy">
+          </picture>
+        </div>
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <!-- Feature 1 -->
+      <div class="feature-item">
+        <div class="feature-text">
+          <h3>Device Information Retrieval</h3>
+          <p>Retrieve detailed device information, including device name, model, iOS version, UDID, serial number, etc.</p>
+        </div>
+        <div class="feature-image">
+          <picture>
+            <source srcset="assets/device-info.webp" type="image/webp">
+            <img src="assets/device-info.png" alt="Device Information Screenshot" width="600" height="400" loading="lazy">
+          </picture>
+        </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="feature-item reverse">
+        <div class="feature-text">
+          <h3>App Explorer</h3>
+          <p>List all the installed application on device with basic metadata, select any app to explore detailed information like Info.plist, files, storage(keychain,NSUserDefaults, etc), Classes, etc.</p>
+        </div>
+        <div class="feature-image">
+          <picture>
+            <source srcset="assets/app-management.webp" type="image/webp">
+            <img src="assets/app-management.png" alt="App Management Screenshot" width="600" height="400" loading="lazy">
+          </picture>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="feature-item">
+        <div class="feature-text">
+          <h3>IPA Extraction</h3>
+          <p>Extract <b>Decrypted</b> IPA files from installed applications for further analysis and reverse engineering (powered by <a href="https://github.com/AloneMonkey/frida-ios-dump" target="_blank" rel="noopener noreferrer">frida-ios-dump</a>).</p>
+        </div>
+        <div class="feature-image">
+          <picture>
+            <source srcset="assets/ipa-extraction.webp" type="image/webp">
+            <img src="assets/ipa-extraction.png" alt="IPA Extraction Screenshot" width="600" height="400" loading="lazy">
+          </picture>
+        </div>
+      </div>
+      <!-- Feature 4 -->
+      <div class="feature-item reverse">
+        <div class="feature-text">
+          <h3>Quick Scan</h3>
+          <p>A simple rule-based scanner powered by frida to scan any installed application on the device to identify vulnerabilities and misconfigurations.</p>
+        </div>
+        <div class="feature-image">
+          <picture>
+            <source srcset="assets/quick-scan.webp" type="image/webp">
+            <img src="assets/quick-scan.png" alt="Quick Scan Screenshot" width="600" height="400" loading="lazy">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Setup Section -->
+  <section id="setup" class="setup">
+    <div class="container">
+      <h2>Setup MobXplore</h2>
+      <p class="subtitle">Get started with MobXplore in just a few simple steps</p>
+      
+      <div class="setup-accordion">
+        <!-- Step 1 -->
+        <div class="setup-step active">
+          <button class="step-header">
+            <span class="step-number">1</span>
+            <h3>Prerequisites</h3>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="step-content">
+            <ul class="step-list">
+              <li>A computer with root privileges.</li>
+              <li>A Jailbroken iOS device with frida installed and SSH access.</li>
+              <li>Python 3, Frida and libimobiledevice installed on system.</li>
+              <li>Docker (if running using docker).</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="setup-step">
+          <button class="step-header">
+            <span class="step-number">2</span>
+            <h3>Running MobXplore</h3>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="step-content">
+            <p><b>Follow these steps to run mobxplore on your system:</b></p>
+            <ul class="step-list">
+              <li>Create and active virtual environment</li>
+              <div class="code-block">
+              <code>python3 -m venv mobxplore_venv</code><br>
+              <code>source  mobxplore_venv/bin/activate</code>
+              </div>
+              <li>Clone the repository</li>
+              <div class="code-block">
+              <code>git clone https://github.com/enciphers-team/mobXplore</code><br>
+              <code>cd mobXplore</code>
+              </div>
+              <li>Install the requirements</li>
+              <div class="code-block">
+              <code>pip3  install  -r  requirements.txt</code>
+              </div>
+              <li>Run mobxplore</li>
+              <div class="code-block">
+              <code>streamlit run main.py</code>
+              </div>
+            </ul>
+            <p>Now you can access the application at <b>http://localhost:8501</b></p>
+            <p><b>Note:</b> This method works on Linux and MacOS only, if you are on windows use a linux VM with access to USB port.</p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="setup-step">
+          <button class="step-header">
+            <span class="step-number">3</span>
+            <h3>Configure Your Device</h3>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="step-content">
+            <p>You can connect your device in the following ways:</p>
+            <ul class="step-list">
+              <li><b>Using USB cable:</b></li>
+              <div class="code-block">
+              <code>Just connect you device via any of the USB cable that your device supports, ideally the cable used for charging should always work.</code>
+              </div>
+              <li><b>Remote Connection (Wireless):</b></li>
+              <p></p>
+              <ul class="step-list">
+              <li>Make sure your device is connected to same wifi network.</li>
+              <li>Run the command on your systems terminal(on Docker container shell, if using docker): </li>
+              <div class="code-block">
+              <code>ssh -L 27042:localhost:27042 root@&lt;mobile_IP&gt; -o ServerAliveInterval=60</code>
+              </div>
+              <li>Run mobXplore tool and click on <b>Connect Remote Device</b> button.</li>
+            </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MobXplore. All rights reserved.</p>
+      <p>Developed and Maintained by</p>
+      <a href="https://www.enciphers.com" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source srcset="assets/enciphers-logo.webp" type="image/webp">
+          <img src="assets/enciphers-logo.png" alt="Enciphers" class="enciphers-logo" width="120" height="40" loading="lazy">
+        </picture>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
