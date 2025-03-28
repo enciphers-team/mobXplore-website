@@ -1,2 +1,2 @@
 # mobXplore-website
-Code for cobxplore.com
+Code for mobxplore.com
